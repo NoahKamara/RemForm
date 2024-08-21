@@ -1,0 +1,15 @@
+{
+  "originHash" : "e658bd724c94c7a338427c2d65c6f3ab540ad80c074d4f9b58b7447129fbbe43",
+  "pins" : [
+    {
+      "identity" : "natural",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NoahKamara/Natural",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a10e7317cde39317ed205ee287c858db09b7d95e"
+      }
+    }
+  ],
+  "version" : 3
+}

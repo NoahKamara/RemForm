@@ -5,17 +5,23 @@ import PackageDescription
 
 let package = Package(
     name: "RemForm",
+    platforms: [
+        .macOS(.v15),
+        .iOS(.v18)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "RemForm",
             targets: ["RemForm"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/NoahKamara/Natural", branch: "main")
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "RemForm"),
+            name: "RemForm",
+            dependencies: ["Natural"]
+        ),
 
     ]
 )
