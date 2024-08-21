@@ -1,6 +1,6 @@
 
 
-public struct FormValues {
+public struct FormValues: Codable {
     public typealias Key = FormSchema.Parameter.ID
 
     private var values: [Key: FormValue]
@@ -27,14 +27,14 @@ public struct FormValues {
 }
 
 // MARK: Values
-public enum FormValue: Equatable {
+public enum FormValue: Equatable, Codable {
     case primitive(Primitive)
 }
 
 
 // MARK: Primitive
 public extension FormValue {
-    enum Primitive: Equatable {
+    enum Primitive: Equatable, Codable {
         case int(Int)
         case string(String)
         case bool(Bool)
